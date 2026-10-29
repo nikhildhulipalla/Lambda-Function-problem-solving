@@ -1,0 +1,55 @@
+```python
+# 1
+is_prime = lambda n: n > 1 and all(n % i != 0 for i in range(2, int(n**0.5) + 1))
+
+# 2
+is_armstrong = lambda n: n >= 0 and n == sum(int(d) ** len(str(n)) for d in str(n))
+
+# 3
+is_spy = lambda n: n >= 0 and sum(int(d) for d in str(n)) == __import__('math').prod(int(d) for d in str(n))
+
+# 4
+is_neon = lambda n: n >= 0 and sum(int(d) for d in str(n * n)) == n
+
+# 5
+digit_sum = lambda n: sum(int(d) for d in str(abs(n)))
+
+# 6
+digit_product = lambda n: __import__('math').prod(int(d) for d in str(abs(n)))
+
+# 7
+is_palindrome = lambda n: str(n) == str(n)[::-1]
+
+# 8
+is_perfect = lambda n: n > 1 and sum(i for i in range(1, n) if n % i == 0) == n
+
+# 9
+is_prime_palindrome = lambda n: is_prime(n) and is_palindrome(n)
+
+# 10
+print(is_prime(7))
+
+# 11
+print(is_armstrong(153))
+
+# 12
+print(is_spy(1124))
+
+# 13
+print(is_neon(9))
+
+# 14
+print(digit_sum(1234))
+
+# 15
+print(digit_product(1234))
+
+# 16
+print(is_palindrome(121))
+
+# 17
+print(is_perfect(6))
+
+# 18
+print(is_prime_palindrome(131))
+```
